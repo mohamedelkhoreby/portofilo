@@ -3,19 +3,49 @@ import Logo from "../../assets/logo.png";
 import InstagramIcon from "../../Assets/instagram.svg";
 import LinkedInIcon from "../../Assets/linkedin.svg";
 import GitHubIcon from "../../Assets/github.svg";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const currentPath = window.location.pathname;
+
   return (
     <>
       <div className="footer">
-      <div className="top-container">
-          <h3 className="stack-footer-title">Start Collaboration</h3>
-          <p className="stack-footer-text">
-            Excited to collaborate? Let's schedule a time <br /> to chat I’ll
-            bring the coffee!" ☕😊
+        <div className="top-container">
+          {currentPath === "/home" ? (
+            <h3 className="stack-footer-title">Start Collaboration</h3>
+          ) : (
+            <h3 className="stack-footer-title">Back to Home</h3>
+          )}
+          {currentPath === "/home" ? (
+            <p className="stack-footer-text">
+              Excited to collaborate? Let's schedule a time <br /> to chat I’ll
+              bring the coffee!" ☕😊
+            </p>
+          ) : (
+            <p className="stack-footer-text">
+            Passionate about innovation? Let’s connect and turn ideas<br /> into reality.
+            I’ll bring the creativity, you bring the vision! 🚀✨"
           </p>
-          <Link to="/about" className="stack-footer-button" >Let's Go</Link>
+          )}
+
+          {currentPath === "/home" ? (
+            <Link
+              to="/about"
+              className="stack-footer-button"
+              onClick={() => (window.location.href = "/about")}
+            >
+              About Me
+            </Link>
+          ) : (
+            <Link
+              to="/home"
+              className="stack-footer-button"
+              onClick={() => (window.location.href = "/home")}
+            >
+              Home
+            </Link>
+          )}
         </div>
         <img
           src={Logo}
@@ -29,7 +59,7 @@ export default function Footer() {
         </p>
         <div className="social-icons">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/mohamedgamalelkhoreby/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -41,7 +71,7 @@ export default function Footer() {
             />
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/moohgamal/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -53,7 +83,7 @@ export default function Footer() {
             />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/mohamedelkhoreby"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -65,10 +95,7 @@ export default function Footer() {
             />
           </a>
         </div>
-        <p className="crafted" >
-          Handcrafted by me
-        </p>
-       
+        <p className="crafted">Handcrafted by Me Using React.js</p>
       </div>
     </>
   );
