@@ -14,7 +14,7 @@ function Router() {
           children: [
             { path: "home", element: <Home /> }, 
             { path: "about", element: <AboutMe /> }, 
-            { path: "*", element: <NotFounded /> },
+            { path: "*", element: <Home /> },
           ],
         },
       ]);
