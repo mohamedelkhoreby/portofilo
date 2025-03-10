@@ -15,9 +15,8 @@ export const Projects = () => {
           </div>
           <div className="projects-description">
             <p>
-              MedAssist is a mobile application that helps patients to book
-              appointments with doctors, order medicine, and get medical advice
-              online.
+              MedAssist is a mobile application that helps doctor to Get a
+              differential diagnosis, containing diagnosis and investigation.
             </p>
           </div>
         </div>
@@ -29,9 +28,9 @@ export const Projects = () => {
           </div>
           <div className="projects-description">
             <p>
-              MedAssist is a mobile application that helps patients to book
-              appointments with doctors, order medicine, and get medical advice
-              online.
+              FashionClub is a mobile application for renting clothes,
+              facilitating hand-to-hand exchanges for a fee, making fashion more
+              accessible and sustainable.
             </p>
           </div>
         </div>
@@ -40,18 +39,18 @@ export const Projects = () => {
         </div>
       </div>
       <div className="medassist">
-        <div className="medassist-image-container">
-          <img src={FreshCart} alt="MedAssist" className="project-image" />
+        <div className="freshcart-image-container">
+          <img src={FreshCart} alt="freshcart" className="project-image" />
         </div>
         <div className="medassist-info">
-          <div className="medassist-title">
+          <div className="freshcart-title">
             <h2>FreshCart</h2>
           </div>
           <div className="projects-description">
             <p>
-              MedAssist is a mobile application that helps patients to book
-              appointments with doctors, order medicine, and get medical advice
-              online.
+              FreshCart is a web application for e-commerce, offering a seamless
+              shopping experience with a wide range of products and secure
+              transactions.
             </p>
           </div>
         </div>

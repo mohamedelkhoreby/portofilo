@@ -171,6 +171,15 @@ body {
   width: 400px;
   height: 400px;
 }
+.freshcart-image-container{
+  background-color: #4fa94d;
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+  display: flex; /* Enable flexbox */
+  border-radius: 60px;
+  width: 400px;
+  height: 400px;
+}
 .fashionclub-info {
   flex-direction: column;
   justify-content: space-evenly;
@@ -188,11 +197,26 @@ body {
   color: #ffffff;
   font-weight: bold;
 }
+.freshcart-title {
+  background-color: #4fa94d;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: bold;
+}
 .projects-description {
   background-color: #ffffff;
   height: 200px;
   width: 70%;
-  color: #ffffff;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  color: #000000;
+  align-items: center; /* Center text vertically */
 }
 /*skills*/
 .section-title {
