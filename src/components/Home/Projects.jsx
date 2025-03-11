@@ -38,11 +38,11 @@ export const Projects = () => {
           <img src={fashionclub} alt="fashionclub" className="project-image" />
         </div>
       </div>
-      <div className="medassist">
+      <div className="freshcart">
         <div className="freshcart-image-container">
-          <img src={FreshCart} alt="freshcart" className="project-image" />
+          <img src={FreshCart} alt="FreshCart" className="project-image" />
         </div>
-        <div className="medassist-info">
+        <div className="freshcart-info">
           <div className="freshcart-title">
             <h2>FreshCart</h2>
           </div>

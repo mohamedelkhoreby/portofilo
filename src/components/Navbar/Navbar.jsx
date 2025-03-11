@@ -6,7 +6,9 @@ export default function Navbar() {
   return <>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="navbar-brand">
-        <img src={Logo} alt="Logo" className="logo-navbar" />
+        <Link to="home">
+          <img src={Logo} alt="Logo" className="logo-navbar" />
+        </Link>
       </div>
       <div className="nav-links">
         <Link to="home" className="nav-button">Home</Link>

@@ -71,6 +71,7 @@ body {
   background-color: #000000;
   color: #ffffff;
   block-size: 20px;
+  text-align: center;
   text-decoration: none;
   padding: 5px 15px;
   border-radius: 3px;
@@ -110,24 +111,29 @@ body {
   padding: 20px;
   background: linear-gradient(to bottom, #001f3f 50%, #d6e5c3 50%);
 }
-.medassist {
+.medassist,
+.fashionclub,
+.freshcart {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 30px;
+  width: 100%;
   padding: 20px;
   animation: slideInFromLeft 1s ease-out forwards;
 }
 .medassist-image-container {
   background-color: #cec8ef;
   justify-content: center;
-  align-items: center; /* Center content vertically */
-  display: flex; /* Enable flexbox */
+  align-items: center; 
+  display: flex; 
   border-radius: 60px;
   width: 400px;
   height: 400px;
 }
-.medassist-info {
+.medassist-info,
+.freshcart-info{
   flex-direction: column;
   justify-content: space-evenly;
   display: flex;
@@ -142,14 +148,6 @@ body {
   font-size: 22px;
   color: #ffffff;
   font-weight: bold;
-}
-.fashionclub {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
-  animation: slideInFromRight 1s ease-out forwards;
 }
 
 @keyframes slideInFromRight {
@@ -171,15 +169,7 @@ body {
   width: 400px;
   height: 400px;
 }
-.freshcart-image-container{
-  background-color: #4fa94d;
-  justify-content: center;
-  align-items: center; /* Center content vertically */
-  display: flex; /* Enable flexbox */
-  border-radius: 60px;
-  width: 400px;
-  height: 400px;
-}
+
 .fashionclub-info {
   flex-direction: column;
   justify-content: space-evenly;
@@ -196,6 +186,16 @@ body {
   font-size: 22px;
   color: #ffffff;
   font-weight: bold;
+}
+.freshcart-image-container {
+  background-color: #4fa94d;
+  justify-content: center;
+  align-items: center; 
+  display: flex; 
+  border-radius: 60px;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
 }
 .freshcart-title {
   background-color: #4fa94d;
@@ -216,7 +216,7 @@ body {
   display: flex;
   text-align: center;
   color: #000000;
-  align-items: center; /* Center text vertically */
+  align-items: center; 
 }
 /*skills*/
 .section-title {
@@ -298,66 +298,78 @@ body {
   line-height: 1.6;
   margin-top: 10px;
 }
-/*Footer*/
+
 .footer {
   background-color: #001f3f;
-  justify-content: space-between;
   text-align: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
   padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .top-container {
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 20vh;
   background-color: #ffffff;
+  width: 70%;
+  max-width: 700px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: space-evenly; /* Distribute space between items */
-  border-radius: 10px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 15px;
 }
 
 .stack-footer-title {
-  font-size: 20px;
+  font-size: 18px;
   color: #001f3f;
   font-weight: bold;
 }
 
 .stack-footer-text {
-  font-size: 15px;
-  color: #001f3f;
-  padding: 0 10px;
-  font-weight: bold;
-  text-align: center; /* Center the text */
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
 }
 
 .stack-footer-button {
   background: #001f3f;
-  border: 2px solid #d6e5c3;
-  padding: 8px 35px;
-  font-size: 16px;
   color: white;
-  border-radius: 10px;
   text-decoration: none;
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 2px solid #d6e5c3;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background 0.3s ease;
 }
-/**/
-.main-footer-text {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
+
+.stack-footer-button:hover {
+  background: #002952;
 }
-.logo-footer {
-  width: 100px;
-  height: auto;
-  padding: 20px;
+
+@media (max-width: 768px) {
+  .top-container {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+  }
+
+  .stack-footer-title {
+    font-size: 16px;
+  }
+
+  .stack-footer-text {
+    font-size: 13px;
+  }
+
+  .stack-footer-button {
+    font-size: 13px;
+    padding: 6px 18px;
+  }
 }
 .social-icons {
   display: flex;
@@ -394,22 +406,96 @@ body {
   background: linear-gradient(to bottom, #d6e5c3 50%, #001f3f 50%);
 }
 .portrait {
-  width: 400px;
-  height: 400px;
+  width: 350px;  
+  height: 350px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   background-color: #ffffff;
-  border: 10px solid #000000;
+  border: 8px solid #000000; 
+  overflow: hidden; 
 }
+
+
 .portrait-image {
-  width: 80%;
-  display: block;
-  margin: 0 auto; /* Center the image horizontally */
+  width: 100%; 
+  max-height: 100%; 
+  object-fit: cover; 
 }
-.form{
+.form {
   text-align: center;
   margin-top: 30px;
   font-size: 25px;
   color: #001f3f;
+}
+/* التناسق مع الموبايل */
+@media (max-width: 768px) {
+  .intro,
+  .medassist,
+  .fashionclub,
+  .freshcart,
+  .portraits {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-photo,
+  .medassist-image-container,
+  .fashionclub-image-container,
+  .freshcart-image-container,
+  .portrait {
+    width: 90%;
+    height: 300px;
+  }
+
+  .skills-title,
+  .skills-subtitle,
+  .projects-description,
+  .stack-footer-title,
+  .stack-footer-text {
+    font-size: 16px;
+  }
+  .portraits {
+    flex-direction: column; /* تحويل الصور إلى عمود */
+    align-items: center;
+    gap: 15px; /* تقليل المسافات بين العناصر */
+  }
+
+  .portrait {
+    width: 280px; /* تصغير الحجم في الموبايل */
+    height: 280px;
+  }
+
+  .portrait-image {
+    width: 100%;
+    height: 100%; /* التأكد من أن الصورة تملأ الحاوية */
+    object-fit: contain; /* احتفظ بكل الصورة بدون تشويه */
+  }
+  .skills-container,
+  .projects-description {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    height: auto;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .main-footer-text,
+  .crafted {
+    font-size: 14px;
+  }
+
+  .stack-footer-button {
+    font-size: 14px;
+    padding: 6px 20px;
+  }
 }

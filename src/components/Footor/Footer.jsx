@@ -3,35 +3,38 @@ import Logo from "../../assets/logo.png";
 import InstagramIcon from "../../Assets/instagram.svg";
 import LinkedInIcon from "../../Assets/linkedin.svg";
 import GitHubIcon from "../../Assets/github.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Footer() {
-  const currentPath = window.location.pathname;
-
+  const location = useLocation(); // ✅ الحصول على المسار الحالي
+  const currentPath = location.pathname; // ✅ تحديد الـ path الصحيح
   return (
     <>
       <div className="footer">
         <div className="top-container">
-          {currentPath === "/home" ? (
+          {""}
+          {currentPath == "/home" ? (
             <h3 className="stack-footer-title">Start Collaboration</h3>
           ) : (
             <h3 className="stack-footer-title">Back to Home</h3>
           )}
-          {currentPath === "/home" ? (
+          {""}
+          {currentPath == "/home" ? (
             <p className="stack-footer-text">
               Excited to collaborate? Let's schedule a time <br /> to chat I’ll
               bring the coffee!" ☕😊
             </p>
           ) : (
             <p className="stack-footer-text">
-            Passionate about innovation? Let’s connect and turn ideas<br /> into reality.
-            I’ll bring the creativity, you bring the vision! 🚀✨"
-          </p>
+              Passionate about innovation? Let’s connect and turn ideas
+              <br /> into reality. I’ll bring the creativity, you bring the
+              vision! 🚀✨"
+            </p>
           )}
-
-          {currentPath === "/home" ? (
+          {""}
+          {currentPath == "/home" ? (
             <Link
-              to="/about"
+              to="about"
               className="stack-footer-button"
               onClick={() => (window.location.href = "/about")}
             >
@@ -39,7 +42,7 @@ export default function Footer() {
             </Link>
           ) : (
             <Link
-              to="/home"
+              to="home"
               className="stack-footer-button"
               onClick={() => (window.location.href = "/home")}
             >
