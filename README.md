@@ -1,6 +1,6 @@
 🚀 Portfolio - Mohamed Elkhoreby
 
-📌 Live Demo: mohamedelkhoreby.github.io/portofilo
+📌 Live Demo: mohamedelkhoreby.github.io/
 
 📌 About the Project
 Portfolio is a modern React.js web application built using Vite to showcase my work, projects, and skills. The website is fully responsive and deployed on GitHub Pages.

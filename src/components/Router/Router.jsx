@@ -7,7 +7,7 @@ import Home from '../Home/Home'
 import AboutMe from '../AboutMe/AboutMe'
 function Router() {
     let routers = createBrowserRouter([
-        { path: "/", element: <Splash /> }, // Splash screen appears first
+        { path: "/", element: <Splash /> }, 
         {
           path: "",
           element: <Layout />,
