@@ -81,6 +81,12 @@ body {
   width: 100px;
   height: auto;
 }
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*Home*/
 .intro {
   flex-direction: row;
@@ -113,6 +119,7 @@ body {
 }
 .medassist,
 .fashionclub,
+.docline,
 .freshcart {
   display: flex;
   flex-direction: row;
@@ -126,18 +133,19 @@ body {
 .medassist-image-container {
   background-color: #cec8ef;
   justify-content: center;
-  align-items: center; 
-  display: flex; 
+  align-items: center;
+  display: flex;
   border-radius: 60px;
   width: 400px;
   height: 400px;
 }
 .medassist-info,
-.freshcart-info{
+.freshcart-info {
   flex-direction: column;
   justify-content: space-evenly;
   display: flex;
 }
+
 .medassist-title {
   background-color: #cec8ef;
   width: 250px;
@@ -176,6 +184,11 @@ body {
   display: flex;
   align-items: end;
 }
+.fashionclub-title h2{
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+}
 .fashionclub-title {
   background-color: #000000;
   width: 250px;
@@ -190,12 +203,17 @@ body {
 .freshcart-image-container {
   background-color: #4fa94d;
   justify-content: center;
-  align-items: center; 
-  display: flex; 
+  align-items: center;
+  display: flex;
   border-radius: 60px;
   width: 400px;
   height: 400px;
   overflow: hidden;
+}
+.freshcart-title h2{
+  color: #000000;
+  font-size: 22px;
+  font-weight: bold;
 }
 .freshcart-title {
   background-color: #4fa94d;
@@ -216,7 +234,41 @@ body {
   display: flex;
   text-align: center;
   color: #000000;
-  align-items: center; 
+  align-items: center;
+}
+.docline-image-container {
+  background-color: #2e86c1;
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+  display: flex; /* Enable flexbox */
+  border-radius: 60px;
+  width: 400px;
+  height: 400px;
+}
+
+.docline-info {
+  flex-direction: column;
+  justify-content: space-evenly;
+  display: flex;
+  align-items: end;
+}
+.docline-title h2 {
+  font-style: italic;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+}
+.docline-title {
+  background-color: #2e86c1;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: bold;
 }
 /*skills*/
 .section-title {
@@ -406,21 +458,19 @@ body {
   background: linear-gradient(to bottom, #d6e5c3 50%, #001f3f 50%);
 }
 .portrait {
-  width: 350px;  
+  width: 350px;
   height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  border: 8px solid #000000; 
-  overflow: hidden; 
+  border: 8px solid #000000;
+  overflow: hidden;
 }
-
-
 .portrait-image {
-  width: 100%; 
-  max-height: 100%; 
-  object-fit: cover; 
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 .form {
   text-align: center;
@@ -430,9 +480,11 @@ body {
 }
 /* التناسق مع الموبايل */
 @media (max-width: 768px) {
+  /* الأقسام الأساسية */
   .intro,
   .medassist,
   .fashionclub,
+  .docline,
   .freshcart,
   .portraits {
     flex-direction: column;
@@ -440,60 +492,113 @@ body {
     text-align: center;
   }
 
+  /* الحاويات التي تحتوي على صور */
   .home-photo,
   .medassist-image-container,
   .fashionclub-image-container,
   .freshcart-image-container,
+  .docline-image-container,
   .portrait {
     width: 90%;
     height: 300px;
   }
 
+  /* العناصر النصية */
   .skills-title,
   .skills-subtitle,
   .projects-description,
   .stack-footer-title,
-  .stack-footer-text {
+  .stack-footer-text,
+  .main-footer-text,
+  .crafted {
     font-size: 16px;
   }
-  .portraits {
-    flex-direction: column; /* تحويل الصور إلى عمود */
-    align-items: center;
-    gap: 15px; /* تقليل المسافات بين العناصر */
-  }
 
-  .portrait {
-    width: 280px; /* تصغير الحجم في الموبايل */
-    height: 280px;
-  }
-
-  .portrait-image {
-    width: 100%;
-    height: 100%; /* التأكد من أن الصورة تملأ الحاوية */
-    object-fit: contain; /* احتفظ بكل الصورة بدون تشويه */
-  }
+  /* وصف المشاريع */
   .skills-container,
   .projects-description {
     width: 90%;
     padding: 15px;
   }
 
+  /* صور البورتريه */
+  .portraits {
+    gap: 15px; /* تقليل المسافات بين العناصر */
+  }
+
+  .portrait {
+    width: 280px;
+    height: 280px;
+  }
+
+  .portrait-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .fashionclub-info {
+    order: 2;
+  }
+
+  .fashionclub-image-container {
+    order: 1;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .docline-info {
+    order: 2;
+  }
+
+  .docline-image-container {
+    order: 1;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .project-image {
+    width: 90%;
+    max-width: 300px;
+  }
+  /* النافبار */
   .navbar {
     flex-direction: row;
+    align-items: center;
     height: auto;
     padding: 10px;
   }
 
+  .navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
   .nav-links {
+    display: flex;
     flex-direction: row;
-    gap: 10px;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
   }
 
-  .main-footer-text,
-  .crafted {
-    font-size: 14px;
+  .nav-button {
+    font-size: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    white-space: nowrap;
   }
 
+  .logo-navbar {
+    display: block;
+    object-fit: contain;
+  }
+
+  /* أزرار الفوتر */
   .stack-footer-button {
     font-size: 14px;
     padding: 6px 20px;

@@ -2,7 +2,6 @@ import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Splash from '../Splash/Splash'
 import Layout from '../Layout/Layout'
-import NotFounded from '../NotFounded/NotFounded'
 import Home from '../Home/Home'
 import AboutMe from '../AboutMe/AboutMe'
 function Router() {

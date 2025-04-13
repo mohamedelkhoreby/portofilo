@@ -2,6 +2,8 @@ import React from "react";
 import medassist from "../../Assets/medassist.png";
 import fashionclub from "../../Assets/fashionclub.png";
 import FreshCart from "../../Assets/FreshCart.png";
+import Docline from "../../Assets/docline.png";
+
 export const Projects = () => {
   return (
     <div className="Projects">
@@ -54,7 +56,24 @@ export const Projects = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div>{" "}
+      <div className="docline">
+        <div className="docline-info">
+          <div className="docline-title">
+            <h2>docLine</h2>
+          </div>
+          <div className="projects-description">
+            <p>
+              Docline is a mobile application for Manage dentists clinics,
+              facilitating appointment scheduling, patient management, and
+              enhancing the efficiency of dental practices.
+            </p>
+          </div>
+        </div>
+        <div className="docline-image-container">
+          <img src={Docline} alt="docline" className="project-image" />
+        </div>
+      </div>{" "}
     </div>
   );
 };
