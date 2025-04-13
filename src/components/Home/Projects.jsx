@@ -64,9 +64,9 @@ export const Projects = () => {
           </div>
           <div className="projects-description">
             <p>
-              Docline is a mobile application for Manage dentists clinics,
-              facilitating appointment scheduling, patient management, and
-              enhancing the efficiency of dental practices.
+            Docline is a smart desktop and mobile-ready app designed for dental clinics.
+            It streamlines patient management, session tracking, and real-time clinic operations
+            like calling patients and monitoring doctor availability — all in one place.
             </p>
           </div>
         </div>

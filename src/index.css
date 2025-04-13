@@ -242,7 +242,7 @@ body {
   align-items: center; /* Center content vertically */
   display: flex; /* Enable flexbox */
   border-radius: 60px;
-  width: 400px;
+  width: 35%;
   height: 400px;
 }
 
@@ -269,6 +269,9 @@ body {
   font-size: 22px;
   color: #ffffff;
   font-weight: bold;
+}
+.project-image {
+  max-width: 400px;
 }
 /*skills*/
 .section-title {
@@ -519,6 +522,7 @@ body {
   .projects-description {
     width: 90%;
     padding: 15px;
+    margin: 0 auto; /* Center the container horizontally */
   }
 
   /* صور البورتريه */
