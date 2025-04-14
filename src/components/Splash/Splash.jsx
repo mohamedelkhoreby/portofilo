@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import "../../index.css"; // Import CSS for styling
-import Logo from "../../assets/logo.png";
-import LOGO2X from "../../assets/logo2x.png";
+import "../../index.css";
+import Logo from "../../Assets/logo.png";
+import Logo2X from "../../Assets/logo2x.png";
 const Splash = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -18,7 +18,7 @@ const Splash = () => {
   return (
     <div className="splash-screen">
       <picture>
-        <source srcSet={LOGO2X} media="(min-width: 768px)" />
+        <source srcSet={Logo2X} media="(min-width: 768px)" />
         <img src={Logo} alt="Logo" className="logo" />
       </picture>{" "}
     </div>
