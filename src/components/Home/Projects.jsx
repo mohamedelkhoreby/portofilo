@@ -1,5 +1,5 @@
 import React from "react";
-import medassist from "../../Assets/medassist.png";
+import medassist from "../../Assets/Medassist.png";
 import fashionclub from "../../Assets/fashionclub.png";
 import FreshCart from "../../Assets/FreshCart.png";
 import Docline from "../../Assets/docline.png";
