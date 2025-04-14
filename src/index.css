@@ -70,12 +70,16 @@ body {
 .nav-button {
   background-color: #000000;
   color: #ffffff;
-  block-size: 20px;
-  text-align: center;
-  text-decoration: none;
   padding: 5px 15px;
   border-radius: 3px;
   font-size: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  border: none;
 }
 .logo-navbar {
   width: 100px;
@@ -565,7 +569,7 @@ body {
     width: 90%;
     max-width: 300px;
   }
-  /* النافبار */
+  /* navbar */
   .navbar {
     flex-direction: row;
     align-items: center;
