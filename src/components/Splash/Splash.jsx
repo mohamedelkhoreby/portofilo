@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import "../../index.css";
 import Logo from "../../Assets/logo.png";
 import Logo2X from "../../Assets/logo2x.png";
+import "./Splash.css"; 
 const Splash = () => {
   const navigate = useNavigate();
   useEffect(() => {

@@ -2,10 +2,33 @@ import React from "react";
 import web from "../../Assets/web.png";
 import mobile from "../../Assets/mobile.png";
 import tech from "../../Assets/tech.png";
+import "./Css/Skills.css";
+import { useEffect} from "react";
 
 export const Skills = () => {
+  
+  useEffect(() => {
+    const elements = document.querySelectorAll(".skills");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-left");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="skills">
+    <div  className="skills">
       <div className="skills-container">
         {/* Logo */}
         <img src={web} alt="Frontend Developer Logo" className="skills-logo" />

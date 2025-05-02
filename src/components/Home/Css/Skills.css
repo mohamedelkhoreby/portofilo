@@ -1,0 +1,84 @@
+/* Skills.css */  
+  .skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: linear-gradient(to bottom, #001f3f 50%, #d6e5c3 50%);
+  }
+  
+  .skills-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 350px; /* Adjust width as needed */
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .animate-left {
+    animation: slideInFromLeft 2s ease-out forwards;
+  }
+ 
+  .skills-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .skills-title {
+    font-size: 22px;
+    color: #001f3f;
+    font-weight: bold;
+  }
+  
+  .skills-description {
+    font-size: 15px;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  .skills-subtitle {
+    font-size: 18px;
+    color: #001f3f;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  .skills-list {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  @media (max-width: 768px) {
+    /* العناصر النصية */
+    .skills-title,
+    .skills-subtitle,
+    .stack-footer-title,
+    .stack-footer-text,
+    .main-footer-text {
+      font-size: 16px;
+    }
+  
+    /* وصف المشاريع */
+    .skills-container {
+      width: 90%;
+      padding: 15px;
+      margin: 0 auto; /* Center the container horizontally */
+    }
+  }

@@ -4,6 +4,7 @@ import beetleware from "../../Assets/beetleware.png";
 import { Skills } from "./Skills";
 import { Projects } from "./Projects";
 import me from "../../Assets/me.png";
+import "./Css/Home.css";
 export default function Home() {
   return (
     <div
